@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--principal-color);
+    text-decoration: none;
+}
+:root{
+    --principal-color: #ffe52f;
+    --secondary-color: #19191a;
+    --third-color: #5A05B3;
+    --font: 'Montserrat', sans-serif;
+    --white: white;
+    --black: black;
+}
+
+/* Style do header */
+
+.section-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 17vh;
+
+    background-color: var(--black);
+}
+.section-header .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+/* Destinado a style da seção principal */
+
+.section-main{
+    width: 100vw;
+    height: 83vh;
+
+    background-color: var(--secondary-color);
+}
