@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+:root{
+    --principal-color: #5A05B3;
+    --secondary-color: #ffe52f;
+    --secondary-color-soft: #ffe52f;
+    --font: 'Montserrat', sans-serif;
+    --white: white;
+    --black: black;
+}
+body{
+    /* background-color: var(--principal-color); */
+}
+/* destinada ao main(caixa principal) e a seus conteúdos */
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--secondary-color);
+}
+.main .fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+    padding: 2rem;
+
+    height: auto;
+
+    border: none;
+    background-color: var(--principal-color);
+
+    box-shadow: -2px -2px 4px var(--black), 2px 2px 4px var(--black);
+
+    border-radius: 26px;
+}
+.main .fieldset #legend{
+    padding-inline: 0.5rem;
+    padding-block: 0.2rem;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    border-top: 1px solid var(--secondary-color);
+    color: var(--principal-color);
+}
+/*style do form*/
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.2rem;
+}
+.form .rm-group, .name-group,.password-group{
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+}
+
+/* Começo dos inputs */
+
+input{
+    background-color: var(--principal-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    outline: none;
+
+    caret-color: var(--secondary-color);
+    
+    width: 15rem;
+
+    padding: 0.5rem;
+    transition: 1s;
+}
+input::placeholder{
+    color: var(--secondary-color);
+}
+input:focus{
+    background-color: var(--secondary-color-soft);
+    color: var(--principal-color);
+    border: 1px solid var(--secondary-color-soft);
+    border-radius: 6px;
+    outline: none;
+
+    caret-color: var(--principal-color);
+}
+input:focus::placeholder{
+    color: var(--principal-color);
+}
+
+/* Style da classe botão */
+.btn{
+    width: 15rem;
+    padding: 0.8rem;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border: 1px solid var(--principal-color);
+    border-radius: 6px;
+
+    background-color: var(--secondary-color-soft);
+    color: var(--principal-color);
+
+    text-align: center;
+
+    transition: 1s;
+}
+.btn:hover{
+    border: 1px solid var(--secondary-color);
+
+    background-color: var(--principal-color);
+    color: var(--secondary-color);
+}
+a{
+    text-decoration: none;
+}
+
+/*parte com JS*/
+
+#form-cad{
+    display: none;
+}
+#form-log{
+    display: flex;
+}
+#btn-log{
+    display: none;
+}
