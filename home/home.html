@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Linkando o javascript -->
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- inicio do cabeçalho com menu -->
     <div class="section-header">
         <div class="logo">
             <img src="../assets/logoTypeHive.png" alt="" width="200px">
@@ -28,7 +29,245 @@
             <a href="">Informações</a>
         </div>
     </div>
-    <div class="section-main"></div>
-    <div class="section"></div>
+    <!-- fim do cabeçalho com menu -->
+    <!-- inicio da seção principal com foto de fundo-->
+    <div class="section-main">
+        <div class="content">
+            <p id="textInit">As inscrições para o interclasse e campeonatos e-sports estão abertas, monte sua equipe e venha competir!!</p>
+            <a href="#section-one">
+                <button class="btn-init">Leia mais</button>
+            </a>
+        </div>
+    </div>
+    <!-- fim da seção principal com foto de fundo-->
+    <!-- inicio da seção 1 com os cards de inscrição de cada modalidade -->
+    <div class="section-one" id="section-one">
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page">Esportes convencionais</p>
+        <!-- div dos cards -->
+        <div class="cards">
+            <!-- Inicio dos cards -->
+            <!-- Inicio de um card -->
+            <a href="../inscricoes/inscricao_futsal.php?modalidade=2">
+                <div class="card">
+                    <img src="../assets/icones/bola_futebol.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">Futsal</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <!-- Fim de um card -->
+            <a href="../inscricoes/inscricao_basquete.php?modalidade=4">
+                <div class="card">
+                    <img src="../assets/icones/bola_basquete.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">Basquete</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../inscricoes/inscricao_volei.php?modalidade=1">
+                <div class="card">
+                    <img src="../assets/icones/bola_volei.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">Vôlei</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../inscricoes/inscricao_tenisdemesa.php?modalidade=3">
+                <div class="card">
+                    <img src="../assets/icones/ping_pong.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">Tênis de mesa</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page">E-sports</p>
+        <div class="cards">
+            <a href="../inscricoes/inscricao_lol.php">
+                <div class="card">
+                    <img src="../assets/icones/league_of_legends.png?modalidade=5" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">League Of Legends</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../inscricoes/inscricao_valorant.php?modalidade=7">
+                <div class="card">
+                    <img src="../assets/icones/valorant.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">Valorant</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../inscricoes/inscricao_csgo.php?modalidade=6">
+                <div class="card">
+                    <img src="../assets/icones/cs.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">CS:GO</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../inscricoes/inscricao_fifa.php?modalidade=8">
+                <div class="card">
+                    <img src="../assets/icones/FIFA.png" alt="" width="150px">
+                    <div class="texts">
+                        <p id="theme-card">Inscrições abertas!!</p>
+                        <p id="title-card">FIFA</p>
+                        <p id="text-card">Inscreva-se e participe individualmente.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- fim da seção 1 com os cards de inscrição de cada modalidade -->
+    <!-- inicio da seção 2 com os cards de informação de cada modalidade -->
+    <div class="section-two">
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page">Informações</p>
+        <!-- Inicio da div dos cards -->
+        <div class="cards">
+            <!-- isto abaixo é um card da seção 2 -->
+            <button href="" id="aclickBasquete" onclick="showBasqueteInfo()">
+                <div class="ver" id="verBasquete">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px" id="imgBasquete">
+                </div>
+            </button>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <a href="" id="basquete">
+                <div class="ver">
+                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                </div>
+            </a>
+            <!-- <div class="card">
+                <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="80%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de Basketball - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_futsal.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de Futsal - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_voleibol.PNG" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de Vôlei - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_tenisdemesa.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de Tênis de Mesa - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_lol.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de League Of Legends - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_csgo.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de CS:GO - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_valorant.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Interclasse de VALORANT - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../assets/cartazes/panfleto_fifa.png" alt="" width="60%">
+                <div class="texts">
+                    <p id="theme-card">Inscrições abertas</p>
+                        <p id="title-card">Campeonato de FIFA - Etec de Peruíbe</p>
+                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- fim da seção 2 com os cards de informação de cada modalidade -->
+    <!-- inicio da seção 3 com chaveamentos de cada modalidade -->
+    <div class="section-three">
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page">Chaveamento</p>
+        <!-- Div dos botões -->
+        <div class="buttons">
+            <button class="btn" onclick="showFutsal()">Futsal</button>
+            <button class="btn" onclick="showBasquete()">Basquete</button>
+            <button class="btn" onclick="showVolei()">Volêi</button>
+            <button class="btn" onclick="showTenisdemesa()">Tênis de mesa</button>
+            <button class="btn" onclick="showCsgo()">CS:GO</button>
+            <button class="btn" onclick="showValorant()">Valorant</button>
+            <button class="btn" onclick="showLol()">League Of Legends</button>
+            <button class="btn" onclick="showFifa()">FIFA</button>
+        </div>
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page-table">Futsal - Tabela</p>
+        <img id="img-table" src="../assets/chaveamentos/chaveamento_futsal.png" alt="" width="70%">
+    </div>
 </body>
 </html>
