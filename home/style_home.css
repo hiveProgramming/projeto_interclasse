@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 :root{
-    --principal-color: rgb(255, 229, 47);
+    --principal-color: #ffe52f;
     --secondary-color: #19191a;
     --third-color: #5A05B3;
     --fontColor: #f5f5f5;
@@ -60,7 +60,7 @@
     background: url(../assets/ftFundoHome.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-color: var(--secondary-color); */
+    /* background-color: var(--fontColor); */
 }
 .section-main .content{
     margin-inline: 10vw;
@@ -238,53 +238,26 @@
     color: var(--principal-color);
 }
 .section-two .cards{
-    column-gap: 5rem;
-}
-.section-two .cards .card{
-    width: 40vw;
-
-    /* border: 1px solid var(--secondary-color); */
-    border-radius: 20px;
-    /* padding-inline: 1rem; */
-    margin-inline: 2rem;
-
-    /* box-shadow: -2px -2px 5px var(--principal-color), 2px 2px 5px var(--principal-color); */
-
-    background-color: var(--principal-color);
-
     display: flex;
     flex-direction: row;
-    align-items: center;
-    transition: 0.4s;
-}
-.section-two .cards .card:hover{
-    margin-inline: 2rem;
-}
-.section-two .cards{
-    display: flex;
     justify-content: center;
     align-items: center;
     row-gap: 4rem;
+    column-gap: 4rem;
+    flex-wrap: wrap;
 }
-.section-two .cards .texts{
-    margin-inline: 2rem;
+.cartazInfo{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-
-    gap: 1rem;
+    align-items: center;
+    row-gap: 1rem;
 }
-.section-two .card .texts p#theme-card{
-    color: var(--secondary-color);
-    font-weight: 600;
-}
-.section-two .card .texts p#title-card{
-    font-size: 25px;
-    font-weight: bold;
+button{
+    cursor: pointer;
 }
 
 /* Style da seção 3 */
+
 .section-three{
     display: flex;
     flex-direction: column;
@@ -319,3 +292,222 @@
 
     padding-inline: 15%;
 }
+.section-three .buttons .btn{
+    background-color: var(--third-color);
+    color: var(--fontColor);
+    border: 1px solid var(--fontColor);
+}
+.section-three .buttons .btn:hover{
+    background-color: var(--fontColor);
+    color: var(--third-color);
+    border: 1px solid var(--third-color);
+}
+
+/* Área destinada  a seção four */
+
+.section-four{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5rem;
+    padding-block: 10rem;
+
+    background-color: var(--fontColor);
+
+    flex-wrap: wrap;
+}
+.section-four p#title-page{
+    font-weight: 300;
+    font-size: 35px;
+    color: var(--secondary-color);
+}
+
+/* Mexendo nos cards de informação - todos os cards aqui */
+
+.infoFutsal{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+}
+p.info-title{
+    font-weight: bold;
+    font-size: 22px;
+}
+p.info-data, p.info-periodo, p.info-horario{
+    font-size: 20px;
+}
+p.info-desc{
+    text-align: justify;
+}
+
+.infoBasquete{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+.infoVolei{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+.infoTenisdemesa{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+.infoLol{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+.infoValorant{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+.infoCsgo{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+.infoFifa{
+    width:  300px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2rem;
+
+    background-color: var(--fontColor);
+
+    row-gap: 1rem;
+
+    font-size: 18px;
+    
+}
+
+/* Responsividade do menu */
+
+.menu-mobile{
+    display: none;
+
+    cursor: pointer;
+}
+.menu-mobile-items{
+    display: none;
+}
+.section-header button{
+    display: none;
+    background-color: currentColor;
+    border: none;
+}
+.section-header .menu .menu-items-no-mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+    /* .section-header{
+        border-bottom: 1px solid var(--principal-color);
+    } */
+    .section-header .menu .menu-items-no-mobile{
+        display: none;
+    }
+    .section-header button{
+        display: block;
+        background-color: currentColor;
+        border: none;
+    }
+    .menu-mobile-capture{
+        display: flex;
+    }
+    .menu-mobile-items{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding-block: 2rem;
+        gap: 1.5rem;
+
+        font-size: 22px;
+
+        background-color: var(--black);
+    }
+    .menu-mobile-items a{
+        color: var(--principal-color);
+    }
+} 

@@ -23,11 +23,8 @@ CREATE TABLE equipe(
 )DEFAULT CHARSET = utf8;
 
 CREATE TABLE jogador_equipe(
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     rm_cadastro VARCHAR(5) NOT NULL,
-    FOREIGN KEY (rm_cadastro) REFERENCES cad(rm),
-    id_equipe INT NOT NULL,
-    FOREIGN KEY (id_equipe) REFERENCES equipe(id)
+    id_equipe INT NOT NULL
 )DEFAULT CHARSET = utf8;
 
 CREATE TABLE campeonato_individual(
