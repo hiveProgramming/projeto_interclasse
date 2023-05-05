@@ -22,12 +22,26 @@
             <img src="../assets/logoTypeHive.png" alt="" width="200px">
         </div>
         <div class="menu">
-            <a href="">Sobre nós</a>
-            <a href="">Notícias</a>
-            <a href="">Inscrições</a>
-            <a href="">Jogos</a>
-            <a href="">Informações</a>
+            <div class="menu-items-no-mobile">
+                <a href="../sobreNos/">Sobre nós</a>
+                <a href="">Notícias</a>
+                <a href="#section-one">Inscrições</a>
+                <a href="#informacoes">Informações</a>
+                <a href="#chaveamentos">Jogos</a>
+            </div>
+            <div class="menu-mobile-capture" id="menu-mobile-capture">
+                <button onclick="showMenu()">
+                    <img src="../assets/menu.png" alt="Três barras" width="45px">
+                </button> 
+            </div>
         </div>
+    </div>
+    <div class="menu-mobile-items">
+        <a href="../sobreNos/">Sobre nós</a>
+        <a href="">Notícias</a>
+        <a href="#section-one">Inscrições</a>
+        <a href="#informações">Informações</a>
+        <a href="#chaveamentos">Jogos</a>
     </div>
     <!-- fim do cabeçalho com menu -->
     <!-- inicio da seção principal com foto de fundo-->
@@ -93,9 +107,9 @@
         <!-- Titulo de seção feito com <p> -->
         <p id="title-page">E-sports</p>
         <div class="cards">
-            <a href="../inscricoes/inscricao_lol.php">
+            <a href="../inscricoes/inscricao_lol.php?modalidade=5">
                 <div class="card">
-                    <img src="../assets/icones/league_of_legends.png?modalidade=5" alt="" width="150px">
+                    <img src="../assets/icones/league_of_legends.png" alt="" width="150px">
                     <div class="texts">
                         <p id="theme-card">Inscrições abertas!!</p>
                         <p id="title-card">League Of Legends</p>
@@ -137,121 +151,129 @@
     </div>
     <!-- fim da seção 1 com os cards de inscrição de cada modalidade -->
     <!-- inicio da seção 2 com os cards de informação de cada modalidade -->
-    <div class="section-two">
+    <div class="section-two" id="informacoes">
         <!-- Titulo de seção feito com <p> -->
         <p id="title-page">Informações</p>
         <!-- Inicio da div dos cards -->
         <div class="cards">
             <!-- isto abaixo é um card da seção 2 -->
-            <button href="" id="aclickBasquete" onclick="showBasqueteInfo()">
-                <div class="ver" id="verBasquete">
+            <div  class="cartazInfo">
+                <div class="verFutsal" id="verFutsal">
+                    <img src="../assets/cartazes/panfleto_futsal.png" alt="" width="300px" id="imgFutsal">
+                </div>
+                <div class="infoFutsal" id="infoFutsal">
+                    <p class="info-title">Interclasse Futsal</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showFutsal" onclick="showInfoFutsal()" >Ver mais</button>
+            </div>
+            <div  class="cartazInfo">
+                <div class="verBasquete" id="verBasquete">
                     <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px" id="imgBasquete">
                 </div>
-            </button>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
+                <div class="infoBasquete" id="infoBasquete">
+                    <p class="info-title">Interclasse Basquete</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
                 </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <a href="" id="basquete">
-                <div class="ver">
-                    <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="300px">
-                </div>
-            </a>
-            <!-- <div class="card">
-                <img src="../assets/cartazes/panfleto_basquete.png" alt="" width="80%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de Basketball - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
-                </div>
+                <button class="btn"
+                id="showBasquete" onclick="showInfoBasquete()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_futsal.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de Futsal - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verVolei" id="verVolei">
+                    <img src="../assets/cartazes/panfleto_voleibol.PNG" alt="" width="300px" id="imgVolei">
                 </div>
+                <div class="infoVolei" id="infoVolei">
+                    <p class="info-title">Interclasse Vôlei</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showVolei" onclick="showInfoVolei()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_voleibol.PNG" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de Vôlei - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verTenisdemesa" id="verTenisdemesa">
+                    <img src="../assets/cartazes/panfleto_tenisdemesa.png" alt="" width="300px" id="imgTenisdemesa">
                 </div>
+                <div class="infoTenisdemesa" id="infoTenisdemesa">
+                    <p class="info-title">Interclasse Tênis de mesa</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showTenisdemesa" onclick="showInfoTenisdemesa()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_tenisdemesa.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de Tênis de Mesa - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verLol" id="verLol">
+                    <img src="../assets/cartazes/panfleto_lol.png" alt="" width="300px" id="imgLol">
                 </div>
+                <div class="infoLol" id="infoLol">
+                    <p class="info-title">Interclasse League of Legends</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showLol" onclick="showInfoLol()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_lol.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de League Of Legends - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verValorant" id="verValorant">
+                    <img src="../assets/cartazes/panfleto_valorant.png" alt="" width="300px" id="imgValorant">
                 </div>
+                <div class="infoValorant" id="infoValorant">
+                    <p class="info-title">Interclasse Valorant</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showValorant" onclick="showInfoValorant()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_csgo.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de CS:GO - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verCsgo" id="verCsgo">
+                    <img src="../assets/cartazes/panfleto_csgo.png" alt="" width="300px" id="imgCsgo">
                 </div>
+                <div class="infoCsgo" id="infoCsgo">
+                    <p class="info-title">Interclasse CS:GO</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showCsgo" onclick="showInfoCsgo()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_valorant.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Interclasse de VALORANT - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
+            <div  class="cartazInfo">
+                <div class="verFifa" id="verFifa">
+                    <img src="../assets/cartazes/panfleto_fifa.png" alt="" width="300px" id="imgFifa">
                 </div>
+                <div class="infoFifa" id="infoFifa">
+                    <p class="info-title">Interclasse FIFA</p>
+                    <p class="info-data">Data:</p>
+                    <p class="info-periodo">Período:</p>
+                    <p class="info-horario">Horário:</p>
+                    <p class="info-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illo, illum iste laudantium inventore est, minus animi, veniam itaque asperiores molestias provident delectus. Omnis doloribus error hic repellat, at quibusdam.</p>
+                </div>
+                <button class="btn"
+                id="showFifa" onclick="showInfoFifa()" >Ver mais</button>
             </div>
-            <div class="card">
-                <img src="../assets/cartazes/panfleto_fifa.png" alt="" width="60%">
-                <div class="texts">
-                    <p id="theme-card">Inscrições abertas</p>
-                        <p id="title-card">Campeonato de FIFA - Etec de Peruíbe</p>
-                        <p id="text-card">Inscreva-se e participe do time da sua sala.</p>
-                </div>
-            </div> -->
         </div>
     </div>
     <!-- fim da seção 2 com os cards de informação de cada modalidade -->
     <!-- inicio da seção 3 com chaveamentos de cada modalidade -->
-    <div class="section-three">
+    <div class="section-three" id="chaveamentos">
         <!-- Titulo de seção feito com <p> -->
         <p id="title-page">Chaveamento</p>
         <!-- Div dos botões -->
@@ -268,6 +290,46 @@
         <!-- Titulo de seção feito com <p> -->
         <p id="title-page-table">Futsal - Tabela</p>
         <img id="img-table" src="../assets/chaveamentos/chaveamento_futsal.png" alt="" width="70%">
+    </div>
+    <!-- fim da seção 2 com os cards de informação de cada modalidade -->
+    <!-- inicio da seção 4 com tabelas de mostrar os times -->
+    <div class="section-four" id="times">
+        <!-- Titulo de seção feito com <p> -->
+        <p id="title-page">Times</p>
+        <table>
+            <caption>
+              Produzidos e vendidos
+            </caption>
+            <thead>
+              <tr>
+                <th class="title" rowspan="2"></th>
+                <th class="title" colspan="2">Amazon</th>
+                <th class="title" colspan="2">Mercado Livre</th>
+              </tr>
+              <tr>
+                <th class="subtitle" scope="col">Produzidos</th>
+                <th class="subtitle" scope="col">Vendidos</th>
+                <th class="subtitle" scope="col">Produzidos</th>
+                <th class="subtitle" scope="col">Vendidos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="title" scope="row">Teclado gamer</th>
+                <td>58</td>
+                <td>50</td>
+                <td>65</td>
+                <td>55</td>
+              </tr>
+              <tr>
+                <th class="title" scope="row">Mouse Gamer</th>
+                <td>30</td>
+                <td>29</td>
+                <td>50</td>
+                <td>40</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </body>
 </html>

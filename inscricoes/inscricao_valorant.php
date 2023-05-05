@@ -1,10 +1,19 @@
+<?php
+    include('../functions.php');
+
+    if(isset($_POST['select-equipe'])){
+        if($_GET['modalidade'] == 2){
+            inscricaoJogador($_POST['select-equipe'], $_POST['rm-usuario']);
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valorant</title>
+    <title>Futsal</title>
 
     <!-- Parte destinada a importação de fontes, links etc. -->
     <link rel="stylesheet" href="style_home.css">
@@ -39,6 +48,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         /* Estilizando a caixa principal e tudo que ela contém */
@@ -47,6 +57,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
 
             flex-wrap: wrap;
 
@@ -54,40 +65,13 @@
             /* /* margin-block: 9vh;
             margin-inline: 7vw; */
             width: 50rem;
-            height: 550px; 
+            height: 60%; 
+
+
 
             border-radius: 0px 30px 30px 0px;
             box-shadow: -3px -3px 5px var(--secondary-color), 3px 3px 5px var(--secondary-color);
         }
-
-        /* fieldset e formulário */
-
-        /* fieldset{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            gap: 1.5rem;
-            padding: 2rem;
-
-            height: auto;
-
-            border: none;
-            background-color: var(--principal-color);
-
-            box-shadow: -2px -2px 4px var(--black), 2px 2px 4px var(--black);
-
-            border-radius: 26px;
-        }
-        fieldset legend{
-            padding-inline: 0.5rem;
-            padding-block: 0.2rem;
-            background-color: var(--third-color);
-            border-radius: 6px;
-            border-top: 1px solid var(--third-color);
-            color: var(--principal-color);
-        } */
         .form{
 
             display: flex;
@@ -98,6 +82,19 @@
             flex-wrap: wrap;
 
             color: var(--secondary-color);
+        }
+
+        @media screen and (max-width: 800px) {
+            #img{
+                width: 100%;
+                height: auto;
+            }
+            .box-main{
+                padding: 2rem;
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+            }
         }
 
         /* input ,select e botão */
@@ -118,7 +115,7 @@
 
             caret-color: var(--secondary-color);
             
-            width: 20rem;
+            width: 100%;
 
             padding: 0.5rem;
             transition: 0.6s;
@@ -171,37 +168,38 @@
     </style>
 </head>
 <body>
-    <!-- DIV DO QUADRADO GRANDE CINZA -->
-    <!-- DIV DO CARTAZ-->
-    <img src="../assets/cartazes/basquete.jpg" alt="" height="550px">
-    <div class="box-main">
+        <!-- DIV DO QUADRADO GRANDE CINZA -->
+        <!-- DIV DO CARTAZ-->
+        <img src="../assets/cartazes/panfleto_valorant.png" alt="" height="60%" id="img">
+        <div class="box-main">
         
         <!-- DIV DO FORM-->
         <div class="form">
             <!-- Titulo de seção feito com <p> -->
         <p id="title-page">Inscrição para o Valorant</p>
-            <!-- <fieldset>
-                <legend>Inscrição basquete</legend> -->
+                <?php
+                echo '
                 <form action="" method="post" class="form">
                     <!-- SELECT DAS EQUIPES -->
                         <label for="select-equipe">Selecione sua equipe</label>
                         <select name="select-equipe" id="select-equipe">
-                            <option value="1">1° DES</option>
-                            <option value="1">1° DES</option>
-                            <option value="1">1° DES</option>
-                            <option value="1">1° DES</option>
-                        </select>
-                    <!-- FIM SELECT DAS EQUIPES -->
-                    <!-- RM USUARIO -->
-                        <label for="rm-usuario">Seu rm</label>
-                        <input type="text" id="rm-usuario" name="rm-usuario" disabled value="04032">
-                    <!-- FIM RM USUARIO -->
-                    <!-- NOME USUARIO -->
-                        <label for="nome-usuario">Seu nome</label>
-                        <input type="text" id="nome-usuario" name="nome-usuario" disabled value="Pedro Luis">
-                    <!-- FIM NOME USUARIO -->
-                    <button type="submit" class="btn">Enviar</button>
-                </form>
+              ';
+              formInscricaoEquipe($_GET['modalidade']);
+              echo '
+                  </select>
+                  <!-- FIM SELECT DAS EQUIPES -->
+                  <!-- RM USUARIO -->
+                      <label for="rm-usuario">Seu rm</label>
+                      <input type="text" id="rm-usuario" name="rm-usuario"  value="'.$_SESSION['rm'].'">
+                  <!-- FIM RM USUARIO -->
+                  <!-- NOME USUARIO -->
+                      <label for="nome-usuario">Seu nome</label>
+                      <input type="text" id="nome-usuario" name="nome-usuario" value="'.$_SESSION['nm_usuario'].'">
+                  <!-- FIM NOME USUARIO -->
+                  <button type="submit" class="btn">Enviar</button>
+              </form>
+              ';
+                ?>
             <!-- </fieldset> -->
         </div>
     </div>

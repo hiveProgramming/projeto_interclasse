@@ -16,6 +16,10 @@
   function messageRefreshHome($text){
     echo '<script>alert("'.$text.'")</script><meta http-equiv="refresh" content="0.1;url=home/home.html"> </meta>';
   }
+  function messageRefreshInscricao($text){
+    echo '<script>alert("'.$text.'")</script><meta http-equiv="refresh" content="0.1;url=../home/home.html"> </meta>';
+  }
+  
 
   //funções do site e do admin
   function cadastrar_usuario($rm, $senha, $nome){
@@ -34,28 +38,21 @@
 
     if($res->num_rows > 0){
       while($row = $res->fetch_assoc()){
-        echo $row['rm'];
-        echo $row['nm_usuario'];
-        $rm_num = $row['rm'];
-        // messageRefreshHome("Login efetuado com sucesso");
+        $_SESSION['rm'] = $row['rm'];
+        $_SESSION['nm_usuario'] = $row['nm_usuario'];
+        messageRefreshHome("Login efetuado com sucesso");
       } 
     } else{
       messageRefreshIndex("Erro ao fazer login");
     }
-    echo $GLOBALS['rm']->rm;
 
   }
 
-  function formInscricaoEquipe($modalidade, $rm, $nm){
+
+  function formInscricaoEquipe($modalidade){
     $sql = 'SELECT * FROM equipe WHERE id_modalidade ='.$modalidade;
     $res = $GLOBALS['conn']->query($sql);
 
-    echo '
-      <form action="" method="post" class="form">
-          <!-- SELECT DAS EQUIPES -->
-              <label for="select-equipe">Selecione sua equipe</label>
-              <select name="select-equipe" id="select-equipe">
-    ';
     if($res->num_rows > 0){
       while($row = $res->fetch_assoc()){
         echo '
@@ -64,24 +61,16 @@
       } 
     } else{
     }
+  }
 
-    
-    echo '
-        </select>
-        <!-- FIM SELECT DAS EQUIPES -->
-        <!-- RM USUARIO -->
-            <label for="rm-usuario">Seu rm</label>
-            <input type="text" id="rm-usuario" name="rm-usuario" disabled value="';
-    echo
-    echo    '">
-        <!-- FIM RM USUARIO -->
-        <!-- NOME USUARIO -->
-            <label for="nome-usuario">Seu nome</label>
-            <input type="text" id="nome-usuario" name="nome-usuario" disabled value="'.$nm.'">
-        <!-- FIM NOME USUARIO -->
-        <button type="submit" class="btn">Enviar</button>
-    </form>
-    ';
-    
+  function inscricaoJogador($equipe, $jogador){
+    $sql = 'INSERT INTO jogador_equipe VALUES ( "'.$jogador.'", '.$equipe.')';
+    $res = $GLOBALS['conn']->query($sql);
+
+    if($res){
+      messageRefreshInscricao("Inscrição feita com sucesso, você será levado para home!!");
+    } else{
+      messageRefreshInscricao("Inscrição em futsal falhou, você ira para home!!");
+    }
   }
 ?>

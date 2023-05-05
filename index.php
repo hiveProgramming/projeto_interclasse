@@ -5,7 +5,7 @@
         cadastrar_usuario($_POST['rm-cad'], $_POST['pass-cad'], $_POST['name-cad']);
     }
     if(isset($_POST['rm-login'])){
-        login_usuario($_POST['rm-login'], $_POST['pass-log']);
+        login_usuario($_POST['rm-login'], md5($_POST['pass-log']));
     }
 ?>
 <!DOCTYPE html>

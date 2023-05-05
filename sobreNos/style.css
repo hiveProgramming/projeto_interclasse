@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:var(--font);
+}
+:root{
+    --principal-color: #5A05B3;
+    --secondary-color: #ffe52f;
+    --font: 'Montserrat', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Seção destinada ao main */
+.section-main{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* background-image: url(assets/imgFundo.jpg); */
+    background-color: var(--principal-color);
+    background-size: cover;
+
+    color: whitesmoke;
+
+    font-size: 22px;
+}
+.section-main .main-content{
+    height: auto;
+    width: auto;
+
+    padding-inline: 20vw;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* gap: 3rem; */
+}
+.section-main .main-content .buttons{
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+/* Seção destinada as seções pós main */
+.sections{
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    padding-block: 3rem;
+}
+.sections .section-item{
+    width: 70vw;
+    height: auto;
+
+    padding: 1rem;
+    padding-block: 2rem;
+
+    border-bottom: 1px solid var(--principal-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-inline: auto;
+}
+
+/* Seção dos perfis*/
+
+.sections .section-item .perfis{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+
+    padding-block: 2rem;
+
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.sections .section-item .perfis .cardPerfil{
+    width: 15rem;
+    height: auto;
+
+    padding-block: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    border: 1px solid var(--principal-color);
+    border-radius: 8px;
+}
+
+/* Seção destinado a tags de texto */
+
+a{
+    cursor: pointer;
+    transition: 1s;
+
+    background-color: white;
+    color: var(--principal-color)
+    ;
+    width: 15rem;
+    padding-block: 1.2rem;
+
+    outline: none;
+    border: 1px solid var(--principal-color);
+    border-radius: 8px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+a:hover{
+    background-color: var(--principal-color);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+a{
+    text-decoration: none;
+}
+p.title{
+    font-family: var(--font);
+    font-size: 25px;
+    font-weight: bold;
+}
+p.text{
+    font-family: var(--font);
+    text-align: justify;
+}
+
+/* Seção destinada a edição de imagens */
+
+img#imgPerfil{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+}
