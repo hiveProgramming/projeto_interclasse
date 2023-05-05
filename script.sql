@@ -59,9 +59,9 @@ CREATE TABLE campeonato_equipe_inscricao(
     FOREIGN KEY (id_camp_equi) REFERENCES campeonato_equipe(id)
 )DEFAULT CHARSET = utf8;
 
-INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04013', 'senhaforte222', 'Pedro Luis de Alencar Ribeiro', 'url', true);
-INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04023', 'senhaforte222', 'Giovanna Nunes de Oliveira', 'url', false);
-INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04108', 'senhaforte222', 'Hector Vieira Saldivar', 'url', false);
+INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04013', md5('senhaforte222'), 'Pedro Luis de Alencar Ribeiro', 'url', true);
+INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04023', md5('senhaforte222'), 'Giovanna Nunes de Oliveira', 'url', false);
+INSERT INTO cad (rm, senha, nm_usuario, img, adm) VALUES ('04108', md5('senhaforte222'), 'Hector Vieira Saldivar', 'url', false);
 
 INSERT INTO modalidade VALUES (default, 'Vôleibol');
 INSERT INTO modalidade VALUES (default, 'Futsal');
